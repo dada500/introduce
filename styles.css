@@ -1,0 +1,272 @@
+/* 기본 스타일 */
+:root {
+    --primary-color: #8BC34A;      /* 연한 그린 색상 */
+    --primary-light: #DCEDC8;      /* 더 연한 그린 */
+    --primary-dark: #558B2F;       /* 더 진한 그린 */
+    --text-color: #333333;         /* 기본 텍스트 색상 */
+    --text-light: #666666;         /* 연한 텍스트 */
+    --white: #FFFFFF;              /* 흰색 */
+    --off-white: #F9F9F9;          /* 약간 회색빛 흰색 */
+    --border-radius: 8px;          /* 모서리 둥글기 */
+    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* 그림자 효과 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 헤더 스타일 */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header .tagline {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* 네비게이션 스타일 */
+nav {
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    display: block;
+    padding: 20px 10px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* 섹션 스타일 */
+.section {
+    padding: 80px 0;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--primary-dark);
+}
+
+.alt-bg {
+    background-color: var(--primary-light);
+}
+
+/* 소개 섹션 */
+.about-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.profile-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-placeholder {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--primary-dark);
+    font-weight: 500;
+}
+
+/* 전문분야 섹션 */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.expertise-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.expertise-card:hover {
+    transform: translateY(-5px);
+}
+
+.expertise-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.expertise-card h3 {
+    margin-bottom: 10px;
+    color: var(--primary-dark);
+}
+
+/* 투자철학 섹션 */
+.philosophy-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin: 40px 0;
+    padding: 20px;
+    border-left: 4px solid var(--primary-color);
+    background-color: var(--off-white);
+    border-radius: var(--border-radius);
+}
+
+.philosophy-list {
+    padding-left: 20px;
+}
+
+.philosophy-list li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* 연락처 섹션 */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+}
+
+.contact-item a {
+    color: var(--primary-dark);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: var(--primary-color);
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    header {
+        padding: 60px 0;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header .tagline {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        padding: 15px 8px;
+        font-size: 0.9rem;
+    }
+} 

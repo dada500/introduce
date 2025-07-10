@@ -1,0 +1,9 @@
+{
+  "name": "dada-investor",
+  "version": "1.0.0",
+  "description": "다다 - 전업투자자 웹사이트",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js"
+  }
+} 
